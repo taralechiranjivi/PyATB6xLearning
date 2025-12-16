@@ -121,8 +121,6 @@ string = "automation"
 string = input("\nEnter the input e.g automation\n")
 
 # {a : 2, u : 1 , t : 2 , o : 2, m : 1, i : 1, n : 1}
-
-
 # Logic building
 # I/P - string e.g automation
 # O/P -> dict  # {a : 2, u : 1 , t : 2 , o : 2, m : 1, i : 1, n : 1}
@@ -130,15 +128,13 @@ string = input("\nEnter the input e.g automation\n")
 char_count = {}
 for char in string:
     char_count[char] = char_count.get(char, 0) + 1
-
+print(char_count)
 
 ### Missing Key
 dict1 = {"a": 1, "b": 2, "c": 3}
 print(dict1.keys())
 print(dict1.values())
-
 dict2 = {"a": 1, "b": 2}
-
 missing_keys = set(dict1.keys() - dict2.keys())
 print(missing_keys)
 
@@ -175,3 +171,32 @@ for key, value in my_dict.items():
         unique_value.add(value)
 
 print(result)
+
+### Dict IQ
+# p = {"name": "Pramod", "name": "Amit"}
+# print(p)
+# my_list = [1, 2, 2, 3, 4, 4, 5]
+
+
+#Check If Two Dictionaries Are Equal
+dict1 = {"a": 1, "b": 2}
+dict2 = {"b": 2, "a": 1}
+print(dict1 == dict2)
+
+### Dict IQ for Count vowels
+input_string = "hello, world!"
+# a,e, i,o,u.
+# vowel ?
+vowels = "aeiou"
+
+vowels_count = 0
+result = list()
+
+for char in input_string:
+    if char in vowels:
+        vowels_count = vowels_count+1
+        result.append(char)
+print(vowels_count)
+print(result)
+
+
